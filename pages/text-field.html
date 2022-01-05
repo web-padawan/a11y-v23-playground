@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Text Field</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./shared.css" />
+    <style>
+      [unresolved] {
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+
+      .label {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: normal;
+        min-width: 150px;
+      }
+
+      section {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <h1 class="h1">Text Field</h1>
+
+    <label>
+      <input type="checkbox" id="dark" />
+      Dark mode
+    </label>
+
+    <h2 class="h2">States</h2>
+
+    <section>
+      <div class="label">Default</div>
+      <div>
+        <vaadin-text-field label="Address"></vaadin-text-field>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Readonly</div>
+      <div>
+        <vaadin-text-field label="Address" readonly></vaadin-text-field>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Disabled</div>
+      <div>
+        <vaadin-text-field label="Address" disabled></vaadin-text-field>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Invalid</div>
+      <div>
+        <vaadin-text-field label="Address" required invalid error-message="This field is required"></vaadin-text-field>
+      </div>
+    </section>
+
+    <h2 class="h2">Features</h2>
+
+    <section>
+      <div class="label">Placeholder</div>
+      <div>
+        <vaadin-text-field label="Address" placeholder="Ruukinkatu 2"></vaadin-text-field>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Clear button</div>
+      <div>
+        <vaadin-text-field label="Address" value="Ruukinkatu 2" clear-button-visible></vaadin-text-field>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Helper text</div>
+      <div>
+        <vaadin-text-field label="Address" helper-text="Your home address"></vaadin-text-field>
+      </div>
+    </section>
+
+    <script type="module">
+      import "@vaadin/text-field";
+      import { color, typography } from "@vaadin/vaadin-lumo-styles";
+
+      // Global color and typography styles
+      const style = document.createElement("style");
+      style.innerHTML = `${color.toString()} ${typography.toString()}`;
+      document.head.appendChild(style);
+
+      // Dark mode toggle
+      document.getElementById("dark").addEventListener("change", () => {
+        if (dark.checked) {
+          document.documentElement.setAttribute("theme", "dark");
+        } else {
+          document.documentElement.removeAttribute("theme");
+        }
+      });
+
+      requestAnimationFrame(() => {
+        document.body.removeAttribute("unresolved");
+      });
+    </script>
+  </body>
+</html>
