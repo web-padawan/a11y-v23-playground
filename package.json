@@ -1,0 +1,42 @@
+{
+  "name": "a11y-v23-playground",
+  "private": true,
+  "author": "Vaadin Ltd",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dist": "rimraf dist && rollup -c && rollup -c --environment pages",
+    "format": "prettier . --write",
+    "start": "web-dev-server --node-resolve"
+  },
+  "dependencies": {
+    "@vaadin/button": "23.0.0-alpha2",
+    "@vaadin/checkbox": "23.0.0-alpha2",
+    "@vaadin/checkbox-group": "23.0.0-alpha2",
+    "@vaadin/combo-box": "23.0.0-alpha2",
+    "@vaadin/custom-field": "23.0.0-alpha2",
+    "@vaadin/date-picker": "23.0.0-alpha2",
+    "@vaadin/date-time-picker": "23.0.0-alpha2",
+    "@vaadin/email-field": "23.0.0-alpha2",
+    "@vaadin/icon": "23.0.0-alpha2",
+    "@vaadin/item": "23.0.0-alpha2",
+    "@vaadin/list-box": "23.0.0-alpha2",
+    "@vaadin/number-field": "23.0.0-alpha2",
+    "@vaadin/password-field": "23.0.0-alpha2",
+    "@vaadin/select": "23.0.0-alpha2",
+    "@vaadin/radio-group": "23.0.0-alpha2",
+    "@vaadin/text-area": "23.0.0-alpha2",
+    "@vaadin/text-field": "23.0.0-alpha2",
+    "@vaadin/time-picker": "23.0.0-alpha2",
+    "@vaadin/upload": "23.0.0-alpha2",
+    "@vaadin/vaadin-lumo-styles": "23.0.0-alpha2"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.29",
+    "@web/rollup-plugin-html": "^1.10.1",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.63.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

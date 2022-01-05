@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Vaadin 23 playground</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/shared.css" />
+    <style>
+      [unresolved] {
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <h1 class="h1">Vaadin 23 samples</h1>
+    <ul>
+      <li><a href="/pages/button.html">Button</a></li>
+    </ul>
+
+    <script type="module">
+      import { color, typography } from "@vaadin/vaadin-lumo-styles";
+
+      // Global color and typography styles
+      const style = document.createElement("style");
+      style.innerHTML = `${color.toString()} ${typography.toString()}`;
+      document.head.appendChild(style);
+
+      requestAnimationFrame(() => {
+        document.body.removeAttribute("unresolved");
+      });
+    </script>
+  </body>
+</html>
+
