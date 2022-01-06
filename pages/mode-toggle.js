@@ -12,9 +12,10 @@ customElements.define(
             position: fixed;
             right: 0.5rem;
             top: 0.5rem;
-            z-index: 1;
+            z-index: 100;
             padding: 0.5rem;
             border: solid 1px #ccc;
+            background: var(--lumo-base-color);
           }
         </style>
         <label>

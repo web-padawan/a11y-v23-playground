@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Confirm Dialog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./shared.css" />
+    <style>
+      [unresolved] {
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <h1 class="h1">CRUD</h1>
+
+    <mode-toggle></mode-toggle>
+
+    <vaadin-button id="open">Open dialog</vaadin-button>
+
+    <vaadin-confirm-dialog header="Unsaved changes" confirm-text="Save" reject-text="Discard" cancel reject>
+      Do you want to save or discard the changes?
+    </vaadin-confirm-dialog>
+
+    <script type="module">
+      import "@vaadin/button";
+      import "@vaadin/confirm-dialog";
+      import "./mode-toggle.js";
+      import "./shared.js";
+
+      const dialog = document.querySelector("vaadin-confirm-dialog");
+      const button = document.querySelector("#open");
+
+      button.addEventListener("click", (event) => {
+        dialog.opened = true;
+      });
+    </script>
+  </body>
+</html>

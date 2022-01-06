@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>App Layout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./shared.css" />
+    <style>
+      [unresolved] {
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+
+      .title {
+        margin: 1.25rem 0;
+        font-size: var(--lumo-font-size-l);
+      }
+    </style>
+  </head>
+
+  <body unresolved>
+    <mode-toggle></mode-toggle>
+
+    <vaadin-app-layout>
+      <vaadin-drawer-toggle slot="navbar"></vaadin-drawer-toggle>
+      <h1 class="title" slot="navbar">App Layout</h1>
+      <vaadin-tabs slot="drawer" orientation="vertical">
+        <vaadin-tab>
+          <a>Dashboard</a>
+        </vaadin-tab>
+        <vaadin-tab>
+          <a>Orders</a>
+        </vaadin-tab>
+      </vaadin-tabs>
+      <div class="content">
+        <label>
+          <input id="toggle" type="checkbox" />
+          Toggle drawer "overlay" mode
+        </label>
+      </div>
+    </vaadin-app-layout>
+
+    <script type="module">
+      import "@vaadin/app-layout";
+      import "@vaadin/app-layout/vaadin-drawer-toggle.js";
+      import "@vaadin/tabs";
+      import "./shared.js";
+      import "./mode-toggle.js";
+
+      const layout = document.querySelector("vaadin-app-layout");
+      const checkbox = document.getElementById("toggle");
+
+      checkbox.addEventListener("change", () => {
+        // Update overlay mode using custom CSS property
+        layout.style.setProperty("--vaadin-app-layout-drawer-overlay", checkbox.checked);
+        layout._updateOverlayMode();
+      });
+    </script>
+  </body>
+</html>

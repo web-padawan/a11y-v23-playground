@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form Layout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./shared.css" />
+    <style>
+      [unresolved] {
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+
+      .full-width {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <h1 class="h1">Form Layout</h1>
+
+    <mode-toggle></mode-toggle>
+
+    <vaadin-form-layout style="max-width: 750px">
+      <vaadin-form-item colspan="2">
+        <label slot="label">Address</label>
+        <vaadin-text-field required error-message="This field is required" class="full-width"></vaadin-text-field>
+      </vaadin-form-item>
+      <vaadin-form-item>
+        <label slot="label">State</label>
+        <vaadin-text-field required error-message="This field is required" class="full-width"></vaadin-text-field>
+      </vaadin-form-item>
+      <vaadin-form-item>
+        <label slot="label">Zip Code</label>
+        <vaadin-text-field required error-message="This field is required" class="full-width"></vaadin-text-field>
+      </vaadin-form-item>
+    </vaadin-form-layout>
+
+    <script type="module">
+      import "@vaadin/form-layout";
+      import "@vaadin/form-layout/vaadin-form-item.js";
+      import "@vaadin/text-field";
+      import "./mode-toggle.js";
+      import "./shared.js";
+    </script>
+  </body>
+</html>
