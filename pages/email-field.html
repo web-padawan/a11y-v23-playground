@@ -85,17 +85,8 @@
 
     <script type="module">
       import "@vaadin/email-field";
-      import { color, typography } from "@vaadin/vaadin-lumo-styles";
       import "./mode-toggle.js";
-
-      // Global color and typography styles
-      const style = document.createElement("style");
-      style.innerHTML = `${color.toString()} ${typography.toString()}`;
-      document.head.appendChild(style);
-
-      requestAnimationFrame(() => {
-        document.body.removeAttribute("unresolved");
-      });
+      import "./shared.js";
     </script>
   </body>
 </html>

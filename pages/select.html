@@ -80,13 +80,8 @@
       import "@vaadin/item";
       import "@vaadin/list-box";
       import "@vaadin/select";
-      import { color, typography } from "@vaadin/vaadin-lumo-styles";
       import "./mode-toggle.js";
-
-      // Global color and typography styles
-      const style = document.createElement("style");
-      style.innerHTML = `${color.toString()} ${typography.toString()}`;
-      document.head.appendChild(style);
+      import "./shared.js";
 
       document.querySelectorAll("vaadin-select").forEach((select) => {
         select.renderer = (root) => {
@@ -105,10 +100,6 @@
 
           root.appendChild(listBox);
         };
-      });
-
-      requestAnimationFrame(() => {
-        document.body.removeAttribute("unresolved");
       });
     </script>
   </body>

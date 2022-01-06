@@ -47,13 +47,8 @@
 
     <script type="module">
       import "@vaadin/upload";
-      import { color, typography } from "@vaadin/vaadin-lumo-styles";
       import "./mode-toggle.js";
-
-      // Global color and typography styles
-      const style = document.createElement("style");
-      style.innerHTML = `${color.toString()} ${typography.toString()}`;
-      document.head.appendChild(style);
+      import "./shared.js";
 
       const upload = document.querySelector("#files");
       upload.files = [{ name: "Don Quixote.pdf" }, { name: "Hamlet.pdf", progress: 100, complete: true }];
@@ -61,10 +56,6 @@
       upload.files[0].held = true;
       // To show the retry button
       upload.files[0].error = "Could not upload file";
-
-      requestAnimationFrame(() => {
-        document.body.removeAttribute("unresolved");
-      });
     </script>
   </body>
 </html>
