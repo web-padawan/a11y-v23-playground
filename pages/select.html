@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Select</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./shared.css" />
+    <style>
+      [unresolved] {
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+
+      .label {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: normal;
+        min-width: 150px;
+      }
+
+      section {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <h1 class="h1">Select</h1>
+
+    <label>
+      <input type="checkbox" id="dark" />
+      Dark mode
+    </label>
+
+    <h2 class="h2">States</h2>
+
+    <section>
+      <div class="label">Default</div>
+      <div>
+        <vaadin-select label="Role"></vaadin-select>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Readonly</div>
+      <div>
+        <vaadin-select label="Role" value="User" readonly></vaadin-select>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Disabled</div>
+      <div>
+        <vaadin-select label="Role" disabled></vaadin-select>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Invalid</div>
+      <div>
+        <vaadin-select label="Role" required invalid error-message="This field is required"></vaadin-select>
+      </div>
+    </section>
+
+    <h2 class="h2">Features</h2>
+
+    <section>
+      <div class="label">Placeholder</div>
+      <div>
+        <vaadin-select label="Role" placeholder="Select a role"></vaadin-select>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Helper text</div>
+      <div>
+        <vaadin-select label="Role" helper-text="Change user permissions"></vaadin-select>
+      </div>
+    </section>
+
+    <script type="module">
+      import "@vaadin/item";
+      import "@vaadin/list-box";
+      import "@vaadin/select";
+      import { color, typography } from "@vaadin/vaadin-lumo-styles";
+
+      // Global color and typography styles
+      const style = document.createElement("style");
+      style.innerHTML = `${color.toString()} ${typography.toString()}`;
+      document.head.appendChild(style);
+
+      // Dark mode toggle
+      document.getElementById("dark").addEventListener("change", () => {
+        if (dark.checked) {
+          document.documentElement.setAttribute("theme", "dark");
+        } else {
+          document.documentElement.removeAttribute("theme");
+        }
+      });
+
+      document.querySelectorAll("vaadin-select").forEach((select) => {
+        select.renderer = (root) => {
+          if (root.firstChild) {
+            return;
+          }
+
+          const listBox = document.createElement("vaadin-list-box");
+          // append 3 <vaadin-item> elements
+          ["Admin", "Moderator", "User"].forEach((name) => {
+            const item = document.createElement("vaadin-item");
+            item.textContent = name;
+            item.setAttribute("label", name);
+            listBox.appendChild(item);
+          });
+
+          root.appendChild(listBox);
+        };
+      });
+
+      requestAnimationFrame(() => {
+        document.body.removeAttribute("unresolved");
+      });
+    </script>
+  </body>
+</html>
