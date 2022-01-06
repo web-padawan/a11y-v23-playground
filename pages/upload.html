@@ -29,10 +29,7 @@
   <body unresolved>
     <h1 class="h1">Upload</h1>
 
-    <label>
-      <input type="checkbox" id="dark" />
-      Dark mode
-    </label>
+    <mode-toggle></mode-toggle>
 
     <section>
       <div class="label">Default</div>
@@ -48,23 +45,15 @@
       </div>
     </section>
 
-    <script type="module" >
+    <script type="module">
       import "@vaadin/upload";
       import { color, typography } from "@vaadin/vaadin-lumo-styles";
+      import "./mode-toggle.js";
 
       // Global color and typography styles
       const style = document.createElement("style");
       style.innerHTML = `${color.toString()} ${typography.toString()}`;
       document.head.appendChild(style);
-
-      // Dark mode toggle
-      document.getElementById("dark").addEventListener("change", () => {
-        if (dark.checked) {
-          document.documentElement.setAttribute("theme", "dark");
-        } else {
-          document.documentElement.removeAttribute("theme");
-        }
-      });
 
       const upload = document.querySelector("#files");
       upload.files = [{ name: "Don Quixote.pdf" }, { name: "Hamlet.pdf", progress: 100, complete: true }];

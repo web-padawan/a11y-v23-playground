@@ -28,10 +28,7 @@
   <body unresolved>
     <h1 class="h1">Radio Group</h1>
 
-    <label>
-      <input type="checkbox" id="dark" />
-      Dark mode
-    </label>
+    <mode-toggle></mode-toggle>
 
     <h2 class="h2">States</h2>
 
@@ -93,20 +90,12 @@
     <script type="module">
       import "@vaadin/radio-group";
       import { color, typography } from "@vaadin/vaadin-lumo-styles";
+      import "./mode-toggle.js";
 
       // Global color and typography styles
       const style = document.createElement("style");
       style.innerHTML = `${color.toString()} ${typography.toString()}`;
       document.head.appendChild(style);
-
-      // Dark mode toggle
-      document.getElementById("dark").addEventListener("change", () => {
-        if (dark.checked) {
-          document.documentElement.setAttribute("theme", "dark");
-        } else {
-          document.documentElement.removeAttribute("theme");
-        }
-      });
 
       requestAnimationFrame(() => {
         document.body.removeAttribute("unresolved");
