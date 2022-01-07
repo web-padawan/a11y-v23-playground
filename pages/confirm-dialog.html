@@ -35,6 +35,9 @@
       button.addEventListener("click", (event) => {
         dialog.opened = true;
       });
+
+      // Restore focus back to the button on dialog close
+      dialog.$.dialog.$.overlay.restoreFocusOnClose = true;
     </script>
   </body>
 </html>
