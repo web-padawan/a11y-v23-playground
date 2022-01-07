@@ -18,60 +18,58 @@
 
     <mode-toggle></mode-toggle>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-radio-group label="Delivery time" theme="vertical">
           <vaadin-radio-button name="time-1" label="Read" value="read"></vaadin-radio-button>
           <vaadin-radio-button name="time-1" label="Edit" value="edit"></vaadin-radio-button>
           <vaadin-radio-button name="time-1" label="Delete" value="delete"></vaadin-radio-button>
         </vaadin-radio-group>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
-        <vaadin-radio-group label="Delivery time" theme="vertical" readonly>
+      <section>
+        <div class="label">Readonly</div>
+        <vaadin-radio-group label="Delivery time" theme="vertical" value="read" readonly>
           <vaadin-radio-button name="time-2" label="Read" value="read"></vaadin-radio-button>
           <vaadin-radio-button name="time-2" label="Edit" value="edit"></vaadin-radio-button>
           <vaadin-radio-button name="time-2" label="Delete" value="delete"></vaadin-radio-button>
         </vaadin-radio-group>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-radio-group label="Delivery time" theme="vertical" disabled>
           <vaadin-radio-button name="time-3" label="Read" value="read"></vaadin-radio-button>
           <vaadin-radio-button name="time-3" label="Edit" value="edit"></vaadin-radio-button>
           <vaadin-radio-button name="time-3" label="Delete" value="delete"></vaadin-radio-button>
         </vaadin-radio-group>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Error message</div>
-      <div>
-        <vaadin-radio-group label="Delivery time" theme="vertical" required error-message="This field is required">
+      <section>
+        <div class="label">Invalid</div>
+        <vaadin-radio-group
+          label="Delivery time"
+          theme="vertical"
+          required
+          invalid
+          error-message="This field is required"
+        >
           <vaadin-radio-button name="time-4" label="Read" value="read"></vaadin-radio-button>
           <vaadin-radio-button name="time-4" label="Edit" value="edit"></vaadin-radio-button>
           <vaadin-radio-button name="time-4" label="Delete" value="delete"></vaadin-radio-button>
         </vaadin-radio-group>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper Text</div>
-      <div>
+      <section>
+        <div class="label">Helper Text</div>
         <vaadin-radio-group label="Delivery time" theme="vertical" helper-text="We call 1 hour before">
           <vaadin-radio-button name="time-5" label="Read" value="read"></vaadin-radio-button>
           <vaadin-radio-button name="time-5" label="Edit" value="edit"></vaadin-radio-button>
           <vaadin-radio-button name="time-5" label="Delete" value="delete"></vaadin-radio-button>
         </vaadin-radio-group>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/radio-group";

@@ -20,99 +20,87 @@
 
     <h2 class="h2">States</h2>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-button>Confirm</vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-button disabled>Update</vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Button with prefix</div>
-      <div>
+      <section>
+        <div class="label">Button with prefix</div>
         <vaadin-button>
           <div slot="prefix" aria-hidden="true" style="width: 20px">+</div>
           New
         </vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Button with icon</div>
-      <div>
+      <section>
+        <div class="label">Button with suffix</div>
+        <vaadin-button>
+          Continue
+          <div slot="suffix" aria-hidden="true" style="width: 20px">→</div>
+        </vaadin-button>
+      </section>
+
+      <section>
+        <div class="label">Button with icon</div>
         <vaadin-button>
           <vaadin-icon slot="prefix" icon="lumo:user"></vaadin-icon>
           Sign out
         </vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Icon only button</div>
-      <div>
+      <section>
+        <div class="label">Icon only button</div>
         <vaadin-button aria-label="Download" theme="icon">
           <vaadin-icon icon="lumo:download"></vaadin-icon>
         </vaadin-button>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <h2 class="h2">Theme variants</h2>
 
-    <section>
-      <div class="label">Primary</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Primary</div>
         <vaadin-button theme="primary">Confirm</vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Contrast</div>
-      <div>
+      <section>
+        <div class="label">Contrast</div>
         <vaadin-button theme="contrast">Confirm</vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Primary Contrast</div>
-      <div>
+      <section>
+        <div class="label">Primary Contrast</div>
         <vaadin-button theme="primary contrast">Confirm</vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Success</div>
-      <div>
+      <section>
+        <div class="label">Success</div>
         <vaadin-button theme="success">Confirm</vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Primary Success</div>
-      <div>
+      <section>
+        <div class="label">Primary Success</div>
         <vaadin-button theme="primary success">Confirm</vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Error</div>
-      <div>
+      <section>
+        <div class="label">Error</div>
         <vaadin-button theme="error">Discard</vaadin-button>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Primary Error</div>
-      <div>
+      <section>
+        <div class="label">Primary Error</div>
         <vaadin-button theme="primary error">Discard</vaadin-button>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/button";

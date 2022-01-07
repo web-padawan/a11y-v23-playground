@@ -20,68 +20,56 @@
 
     <h2 class="h2">States</h2>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-date-picker label="Appointment date"></vaadin-date-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
+      <section>
+        <div class="label">Readonly</div>
         <vaadin-date-picker label="Appointment date" readonly></vaadin-date-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-date-picker label="Appointment date" disabled></vaadin-date-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Invalid</div>
-      <div>
+      <section>
+        <div class="label">Invalid</div>
         <vaadin-date-picker
           label="Appointment date"
           required
           invalid
           error-message="This field is required"
         ></vaadin-date-picker>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <h2 class="h2">Features</h2>
 
-    <section>
-      <div class="label">Placeholder</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Placeholder</div>
         <vaadin-date-picker label="Appointment date" placeholder="01/31/2022"></vaadin-date-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Clear button</div>
-      <div>
+      <section>
+        <div class="label">Clear button</div>
         <vaadin-date-picker label="Appointment date" value="2021-01-31" clear-button-visible></vaadin-date-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper text</div>
-      <div>
+      <section>
+        <div class="label">Helper text</div>
         <vaadin-date-picker label="Appointment date" helper-text="Format: MM/DD/YYYY"></vaadin-date-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">No auto open</div>
-      <div>
+      <section>
+        <div class="label">No auto open</div>
         <vaadin-date-picker label="Appointment date" auto-open-disabled></vaadin-date-picker>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/date-picker";

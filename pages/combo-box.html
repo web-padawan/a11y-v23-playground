@@ -20,30 +20,24 @@
 
     <h2 class="h2">States</h2>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-combo-box label="User" allow-custom-value></vaadin-combo-box>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
+      <section>
+        <div class="label">Readonly</div>
         <vaadin-combo-box label="User" readonly></vaadin-combo-box>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-combo-box label="User" disabled></vaadin-combo-box>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Invalid</div>
-      <div>
+      <section>
+        <div class="label">Invalid</div>
         <vaadin-combo-box
           label="User"
           allow-custom-value
@@ -51,38 +45,32 @@
           invalid
           error-message="This field is required"
         ></vaadin-combo-box>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <h2 class="h2">Features</h2>
 
-    <section>
-      <div class="label">Placeholder</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Placeholder</div>
         <vaadin-combo-box label="User" allow-custom-value placeholder="Name Surname"></vaadin-combo-box>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Clear button</div>
-      <div>
+      <section>
+        <div class="label">Clear button</div>
         <vaadin-combo-box label="User" allow-custom-value value="Lillian Perez" clear-button-visible></vaadin-combo-box>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper text</div>
-      <div>
+      <section>
+        <div class="label">Helper text</div>
         <vaadin-combo-box label="User" allow-custom-value helper-text="Select or type a user"></vaadin-combo-box>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">No auto open</div>
-      <div>
+      <section>
+        <div class="label">No auto open</div>
         <vaadin-combo-box label="User" auto-open-disabled></vaadin-combo-box>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/combo-box";

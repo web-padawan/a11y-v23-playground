@@ -20,56 +20,46 @@
 
     <h2 class="h2">States</h2>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-email-field label="Email"></vaadin-email-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
+      <section>
+        <div class="label">Readonly</div>
         <vaadin-email-field label="Email" readonly></vaadin-email-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-email-field label="Email" disabled></vaadin-email-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Invalid</div>
-      <div>
+      <section>
+        <div class="label">Invalid</div>
         <vaadin-email-field label="Email" required invalid error-message="This field is required"></vaadin-email-field>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <h2 class="h2">Features</h2>
 
-    <section>
-      <div class="label">Placeholder</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Placeholder</div>
         <vaadin-email-field label="Email" placeholder="user@example.com"></vaadin-email-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Clear button</div>
-      <div>
+      <section>
+        <div class="label">Clear button</div>
         <vaadin-email-field label="Email" value="user@example.com" clear-button-visible></vaadin-email-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper text</div>
-      <div>
+      <section>
+        <div class="label">Helper text</div>
         <vaadin-email-field label="Email" helper-text="Your work email"></vaadin-email-field>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/email-field";

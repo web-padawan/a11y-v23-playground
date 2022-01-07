@@ -20,49 +20,41 @@
 
     <h2 class="h2">States</h2>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-select label="Role"></vaadin-select>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
+      <section>
+        <div class="label">Readonly</div>
         <vaadin-select label="Role" value="User" readonly></vaadin-select>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-select label="Role" disabled></vaadin-select>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Invalid</div>
-      <div>
+      <section>
+        <div class="label">Invalid</div>
         <vaadin-select label="Role" required invalid error-message="This field is required"></vaadin-select>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <h2 class="h2">Features</h2>
 
-    <section>
-      <div class="label">Placeholder</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Placeholder</div>
         <vaadin-select label="Role" placeholder="Select a role"></vaadin-select>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper text</div>
-      <div>
+      <section>
+        <div class="label">Helper text</div>
         <vaadin-select label="Role" helper-text="Change user permissions"></vaadin-select>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/item";

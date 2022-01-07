@@ -18,9 +18,9 @@
 
     <mode-toggle></mode-toggle>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-custom-field label="Phone number">
           <vaadin-select style="width: 6rem" value="+358"></vaadin-select>
           <vaadin-text-field
@@ -31,12 +31,10 @@
           ></vaadin-text-field>
           <vaadin-number-field></vaadin-number-field>
         </vaadin-custom-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
+      <section>
+        <div class="label">Readonly</div>
         <vaadin-custom-field label="Phone number" readonly>
           <vaadin-select style="width: 6rem" value="+358" readonly></vaadin-select>
           <vaadin-text-field
@@ -49,12 +47,10 @@
           ></vaadin-text-field>
           <vaadin-number-field value="7795657" readonly></vaadin-number-field>
         </vaadin-custom-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-custom-field label="Phone number" disabled>
           <vaadin-select style="width: 6rem" value="+358" disabled></vaadin-select>
           <vaadin-text-field
@@ -67,12 +63,10 @@
           ></vaadin-text-field>
           <vaadin-number-field value="7795657" disabled></vaadin-number-field>
         </vaadin-custom-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Required</div>
-      <div>
+      <section>
+        <div class="label">Required</div>
         <vaadin-custom-field label="Phone number" required error-message="This field is required">
           <vaadin-select style="width: 6rem" value="+358" required></vaadin-select>
           <vaadin-text-field
@@ -84,12 +78,10 @@
           ></vaadin-text-field>
           <vaadin-number-field required></vaadin-number-field>
         </vaadin-custom-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper text</div>
-      <div>
+      <section>
+        <div class="label">Helper text</div>
         <vaadin-custom-field label="Phone number" helper-text="We never send spam">
           <vaadin-select style="width: 6rem" value="+358"></vaadin-select>
           <vaadin-text-field
@@ -100,8 +92,8 @@
           ></vaadin-text-field>
           <vaadin-number-field></vaadin-number-field>
         </vaadin-custom-field>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/custom-field";

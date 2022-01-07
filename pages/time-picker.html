@@ -20,58 +20,48 @@
 
     <h2 class="h2">States</h2>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-time-picker label="Appointment time"></vaadin-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
+      <section>
+        <div class="label">Readonly</div>
         <vaadin-time-picker label="Appointment time" readonly></vaadin-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-time-picker label="Appointment time" disabled></vaadin-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Invalid</div>
-      <div>
+      <section>
+        <div class="label">Invalid</div>
         <vaadin-time-picker
           label="Appointment time"
           required
           invalid
           error-message="This field is required"
         ></vaadin-time-picker>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <h2 class="h2">Features</h2>
 
-    <section>
-      <div class="label">Placeholder</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Placeholder</div>
         <vaadin-time-picker label="Appointment time" placeholder="10:00"></vaadin-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Clear button</div>
-      <div>
+      <section>
+        <div class="label">Clear button</div>
         <vaadin-time-picker label="Appointment time" value="10:00" clear-button-visible></vaadin-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper text</div>
-      <div>
+      <section>
+        <div class="label">Helper text</div>
         <vaadin-time-picker
           label="Appointment time"
           min="08:00"
@@ -80,15 +70,13 @@
           helper-text="Open 8:00-16:00"
           error-message="Incorrect time"
         ></vaadin-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">No auto open</div>
-      <div>
+      <section>
+        <div class="label">No auto open</div>
         <vaadin-time-picker label="Appointment time" auto-open-disabled></vaadin-time-picker>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/time-picker";

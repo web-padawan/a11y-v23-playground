@@ -14,53 +14,47 @@
     </style>
   </head>
   <body unresolved>
-    <h1 class="h1">Checkbox</h1>
+    <h1 class="h1">Checkbox Group</h1>
 
     <mode-toggle></mode-toggle>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-checkbox-group label="Permissions" theme="vertical">
           <vaadin-checkbox label="Read" value="read"></vaadin-checkbox>
           <vaadin-checkbox label="Edit" value="edit"></vaadin-checkbox>
           <vaadin-checkbox label="Delete" value="delete"></vaadin-checkbox>
         </vaadin-checkbox-group>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-checkbox-group label="Permissions" theme="vertical" disabled>
           <vaadin-checkbox label="Read" value="read" checked></vaadin-checkbox>
           <vaadin-checkbox label="Edit" value="edit"></vaadin-checkbox>
           <vaadin-checkbox label="Delete" value="delete"></vaadin-checkbox>
         </vaadin-checkbox-group>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Error message</div>
-      <div>
+      <section>
+        <div class="label">Error message</div>
         <vaadin-checkbox-group label="Permissions" theme="vertical" required error-message="This field is required">
           <vaadin-checkbox label="Read" value="read"></vaadin-checkbox>
           <vaadin-checkbox label="Edit" value="edit"></vaadin-checkbox>
           <vaadin-checkbox label="Delete" value="delete"></vaadin-checkbox>
         </vaadin-checkbox-group>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper Text</div>
-      <div>
+      <section>
+        <div class="label">Helper Text</div>
         <vaadin-checkbox-group label="Permissions" theme="vertical" helper-text="User will have to login">
           <vaadin-checkbox label="Read" value="read"></vaadin-checkbox>
           <vaadin-checkbox label="Edit" value="edit"></vaadin-checkbox>
           <vaadin-checkbox label="Delete" value="delete"></vaadin-checkbox>
         </vaadin-checkbox-group>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/checkbox-group";

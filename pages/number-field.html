@@ -20,61 +20,58 @@
 
     <h2 class="h2">States</h2>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
+
         <vaadin-number-field label="Amount"></vaadin-number-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
+      <section>
+        <div class="label">Readonly</div>
+
         <vaadin-number-field label="Amount" readonly></vaadin-number-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
+
         <vaadin-number-field label="Amount" disabled></vaadin-number-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Invalid</div>
-      <div>
+      <section>
+        <div class="label">Invalid</div>
+
         <vaadin-number-field
           label="Amount"
           required
           invalid
           error-message="This field is required"
         ></vaadin-number-field>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <h2 class="h2">Features</h2>
 
-    <section>
-      <div class="label">Placeholder</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Placeholder</div>
+
         <vaadin-number-field label="Amount" placeholder="42"></vaadin-number-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Controls</div>
-      <div>
+      <section>
+        <div class="label">Controls</div>
+
         <vaadin-number-field label="Amount" has-controls></vaadin-number-field>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper text</div>
-      <div>
+      <section>
+        <div class="label">Helper text</div>
+
         <vaadin-number-field label="Amount" helper-text="Positive number"></vaadin-number-field>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/number-field";

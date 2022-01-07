@@ -18,42 +18,39 @@
 
     <mode-toggle></mode-toggle>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
-        <vaadin-checkbox label="Do not remember me"></vaadin-checkbox>
-      </div>
-    </section>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
+        <vaadin-checkbox label="Accept cookies"></vaadin-checkbox>
+      </section>
 
-    <section>
-      <div class="label">Checked</div>
-      <div>
-        <vaadin-checkbox label="Do not remember me" checked></vaadin-checkbox>
-      </div>
-    </section>
+      <section>
+        <div class="label">Checked</div>
+        <vaadin-checkbox label="Accept cookies" checked></vaadin-checkbox>
+      </section>
 
-    <section>
-      <div class="label">Indeterminate</div>
-      <div>
-        <vaadin-checkbox label="Do not remember me" indeterminate></vaadin-checkbox>
-      </div>
-    </section>
+      <section>
+        <div class="label">Indeterminate</div>
+        <vaadin-checkbox label="Accept cookies" indeterminate></vaadin-checkbox>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
-        <vaadin-checkbox label="Do not remember me" disabled></vaadin-checkbox>
-      </div>
-    </section>
+      <section>
+        <div class="label">Disabled</div>
+        <vaadin-checkbox label="Accept cookies" disabled></vaadin-checkbox>
+      </section>
 
-    <section>
-      <div class="label">Link</div>
-      <div>
+      <section>
+        <div class="label">Disabled Checked</div>
+        <vaadin-checkbox label="Accept cookies" disabled></vaadin-checkbox>
+      </section>
+
+      <section>
+        <div class="label">Link</div>
         <vaadin-checkbox>
-          <label slot="label">I accept <a href="https://example.com">terms and conditions</a></label>
+          <label slot="label">Accept <a href="https://example.com">cookies</a></label>
         </vaadin-checkbox>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/checkbox";

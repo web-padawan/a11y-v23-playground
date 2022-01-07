@@ -24,69 +24,59 @@
 
     <h2 class="h2">States</h2>
 
-    <section>
-      <div class="label">Default</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Default</div>
         <vaadin-date-time-picker label="Meeting date and time"></vaadin-date-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Readonly</div>
-      <div>
+      <section>
+        <div class="label">Readonly</div>
         <vaadin-date-time-picker label="Meeting date and time" readonly></vaadin-date-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Disabled</div>
-      <div>
+      <section>
+        <div class="label">Disabled</div>
         <vaadin-date-time-picker label="Meeting date and time" disabled></vaadin-date-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Invalid</div>
-      <div>
+      <section>
+        <div class="label">Invalid</div>
         <vaadin-date-time-picker
           label="Meeting date and time"
           required
           invalid
           error-message="This field is required"
         ></vaadin-date-time-picker>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <h2 class="h2">Features</h2>
 
-    <section>
-      <div class="label">Placeholder</div>
-      <div>
+    <div class="grid">
+      <section>
+        <div class="label">Placeholder</div>
         <vaadin-date-time-picker
           label="Meeting date and time"
           helper-text="Format: MM/DD/YYYY and HH:MM"
           date-placeholder="MM/DD/YYYY"
           time-placeholder="HH:MM"
         ></vaadin-date-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">Helper text</div>
-      <div>
+      <section>
+        <div class="label">Helper text</div>
         <vaadin-date-time-picker
           label="Meeting date and time"
           helper-text="Book a meeting room next"
         ></vaadin-date-time-picker>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="label">No auto open</div>
-      <div>
+      <section>
+        <div class="label">No auto open</div>
         <vaadin-date-time-picker label="Meeting date and time" auto-open-disabled></vaadin-date-time-picker>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script type="module">
       import "@vaadin/date-time-picker";
