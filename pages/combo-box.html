@@ -11,6 +11,10 @@
         opacity: 0;
         transition: opacity 0.1s linear;
       }
+
+      #custom {
+        --vaadin-combo-box-overlay-width: 240px;
+      }
     </style>
   </head>
   <body unresolved>
@@ -23,23 +27,23 @@
     <div class="grid">
       <section>
         <div class="label">Default</div>
-        <vaadin-combo-box label="User" allow-custom-value></vaadin-combo-box>
+        <vaadin-combo-box label="Emoji" allow-custom-value></vaadin-combo-box>
       </section>
 
       <section>
         <div class="label">Readonly</div>
-        <vaadin-combo-box label="User" readonly></vaadin-combo-box>
+        <vaadin-combo-box label="Emoji" readonly></vaadin-combo-box>
       </section>
 
       <section>
         <div class="label">Disabled</div>
-        <vaadin-combo-box label="User" disabled></vaadin-combo-box>
+        <vaadin-combo-box label="Emoji" disabled></vaadin-combo-box>
       </section>
 
       <section>
         <div class="label">Invalid</div>
         <vaadin-combo-box
-          label="User"
+          label="Emoji"
           allow-custom-value
           required
           invalid
@@ -53,22 +57,27 @@
     <div class="grid">
       <section>
         <div class="label">Placeholder</div>
-        <vaadin-combo-box label="User" allow-custom-value placeholder="Name Surname"></vaadin-combo-box>
+        <vaadin-combo-box label="Emoji" allow-custom-value placeholder="Set your status"></vaadin-combo-box>
       </section>
 
       <section>
         <div class="label">Clear button</div>
-        <vaadin-combo-box label="User" allow-custom-value value="Lillian Perez" clear-button-visible></vaadin-combo-box>
+        <vaadin-combo-box label="Emoji" allow-custom-value value="Coconut" clear-button-visible></vaadin-combo-box>
       </section>
 
       <section>
         <div class="label">Helper text</div>
-        <vaadin-combo-box label="User" allow-custom-value helper-text="Select or type a user"></vaadin-combo-box>
+        <vaadin-combo-box label="Emoji" allow-custom-value helper-text="Select or type custom emoji"></vaadin-combo-box>
       </section>
 
       <section>
         <div class="label">No auto open</div>
-        <vaadin-combo-box label="User" auto-open-disabled></vaadin-combo-box>
+        <vaadin-combo-box label="Emoji" auto-open-disabled></vaadin-combo-box>
+      </section>
+
+      <section>
+        <div class="label">Custom item content</div>
+        <vaadin-combo-box id="custom" label="Emoji" item-label-path="label" item-value-path="value"></vaadin-combo-box>
       </section>
     </div>
 
@@ -78,11 +87,42 @@
       import "./shared.js";
 
       (async () => {
-        const res = await fetch("https://demo.vaadin.com/demo-data/1.0/people?count=200");
+        const res = await fetch("https://api.emojisworld.fr/v1/random");
         const data = await res.json();
 
+        function capitalize(name) {
+          return name[0].toUpperCase() + name.slice(1);
+        }
+
+        function truncate(input) {
+          return input.length > 15 ? `${input.substring(0, 15)}...` : input;
+        }
+
         document.querySelectorAll("vaadin-combo-box").forEach((comboBox) => {
-          comboBox.items = data.result.map((user) => `${user.firstName} ${user.lastName}`);
+          if (comboBox.id === "custom") {
+            comboBox.items = data.results.map((item) => {
+              return {
+                label: capitalize(item.name),
+                value: item.name,
+                emoji: item.emoji,
+              };
+            });
+            comboBox.renderer = (root, _, model) => {
+              root.innerHTML = "";
+
+              const img = document.createElement("span");
+              img.setAttribute("role", "image");
+              img.textContent = model.item.emoji;
+              root.appendChild(img);
+              img.style.marginRight = "1rem";
+
+              const label = document.createElement("span");
+              label.textContent = truncate(model.item.label);
+              root.appendChild(label);
+            };
+          } else {
+            comboBox.items = data.results.map((item) => capitalize(item.name));
+          }
         });
       })();
     </script>
